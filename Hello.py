@@ -24,25 +24,21 @@ def run():
         page_icon="👋",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
+    st.write("Hello there! 👋")
 
     st.sidebar.success("Select a demo above.")
 
     st.markdown(
         """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
+       I am passionate about technology and innovation. As an aspiring programmer, 
+       I thribe on tackling complex problems and creating bright solutions.
+       I first discovered my love for programming during my involvement in competitive robotics.
+       As one of the leaders of an award-winning FIRST Tech Challenge team #14212, 
+       I honed my skills in Java, Python, C++, HTML and CSS by designing and coding robots to
+       autonomously navigate obstacle courses. This experience sparkled in me a relentless curiosity 
+       to push boundaries and expand my caoabilities.
+
+       Find more of my work in the Project Section!
     """
     )
 
