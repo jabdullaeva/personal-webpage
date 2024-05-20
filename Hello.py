@@ -33,7 +33,7 @@ def run():
         beautifully simple things, and I love what I do.</p>""", unsafe_allow_html=True)
 
     blue_container = """
-    <div style="background-color: #007FFF; padding: 20px; border-radius: 10px; margin-bottom: 20px; width: 200%;">
+    <div style="background-color: #007FFF; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
         <h2 style="font-family: 'Roboto', sans-serif; text-align: center; font-size: 25px; color: white;">Hi, I’m Jasmina. Nice to meet you.👋</h2>
         <p style="font-family: 'Roboto', sans-serif; text-align: center; font-size: 16px; color: white;">
         Since beginning my journey, I thrive on tackling complex problems 
