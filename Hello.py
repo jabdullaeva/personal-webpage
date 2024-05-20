@@ -22,7 +22,7 @@ def run():
         page_title="Hello",
         page_icon="👋",
     )
-
+                
     st.markdown("""
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     """, unsafe_allow_html=True)
@@ -42,7 +42,7 @@ def run():
         Since beginning of my journey, I have always thrived to takle complex problems and create bright solutions. I first discovered my love for programming during my involvement 
         in competitive robotics. As one of the leaders of an award-winning FIRST Tech Challenge team #14212, 
         I honed my skills by designing and coding robots to autonomously navigate obstacle courses. 
-        I'm quietly confident, naturally curious, and perpetually working on improving my chops.
+        I'm quietly confident, naturally curious, and working on improving my chops.
         </p>
     </div>
     """
