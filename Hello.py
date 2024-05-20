@@ -51,10 +51,8 @@ def run():
     <style>
         .rounded-table {
             width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
+            border-collapse: collapse;
             font-family: 'Arial', sans-serif;
-            border: 1px solid #ddd;
             border-radius: 15px;
             overflow: hidden;
         }
@@ -62,7 +60,6 @@ def run():
             border: 1px solid #ddd;
             padding: 16px;
             text-align: center;
-            vertical-align: top;
         }
         .rounded-table thead tr {
             background-color: #f2f2f2;
@@ -82,44 +79,32 @@ def run():
         }
     </style>
     <table class="rounded-table">
+        <thead>
+            <tr>
+                <th>Frontend Developer</th>
+                <th>Mentor</th>
+                <th>Designer</th>
+            </tr>
         </thead>
         <tbody>
             <tr>
                 <td>
-                    <p style="color: #007FFF;"><b>Frontend Developer</b><p>
-                    I like to code things from scratch, and enjoy bringing ideas to life in the browser.<br><br>
-                    <b>Languages I speak:</b><br>
-                    Java, Python, C++, HTML, CSS<br><br>
-                    <b>Dev Tools:</b><br>
-                    Github<br>
-                    Netlify<br>
-                    Tailwind CSS<br>
-                    VS Code
+                    <p style="color: #007FFF;"><b>Frontend Developer</b></p>
+                    <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
+                    <p><b>Languages I speak:</b> Java, Python, C++, HTML, CSS</p>
+                    <p><b>Dev Tools:</b> Github, Netlify, Tailwind CSS, VS Code</p>
                 </td>
                 <td>
-                    <p style="color: #007FFF;">Mentor<b></b></p>
-                    I genuinely care about people, and enjoy helping them work on their craft.<br><br>
-                    <b>Experiences I draw from:</b><br>
-                    UX/UI, Quality Assurance, Product design<br><br>
-                    <b>Mentor Stats:</b><br>
-                    9+ years experience<br>
-                    30+ short courses<br>
-                    65+ bootcamps<br>
-                    250+ students<br>
-                    2,500+ mentor sessions<br>
-                    60+ group critiques<br>
-                    18,000+ bits of feedback
+                    <p style="color: #007FFF;"><b>Mentor</b></p>
+                    <p>I genuinely care about people, and enjoy helping them work on their craft.</p>
+                    <p><b>Experiences I draw from:</b> UX/UI, Quality Assurance, Product design</p>
+                    <p><b>Mentor Stats:</b> 9+ years experience, 30+ short courses, 65+ bootcamps, 250+ students, 2,500+ mentor sessions, 60+ group critiques, 18,000+ bits of feedback</p>
                 </td>
                 <td>
-                    <p style="color: #007FFF;"><b>Designer</b><p>
-                    I value simple content structure, clean design patterns, and thoughtful interactions.<br><br>
-                    <b>Things I enjoy designing:</b><br>
-                    UX, UI, Web, Apps, Logos<br><br>
-                    <b>Design Tools:</b><br>
-                    Affinity Designer<br>
-                    Figma<br>
-                    Pen & Paper<br>
-                    Sketch
+                    <p style="color: #007FFF;"><b>Designer</b></p>
+                    <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+                    <p><b>Things I enjoy designing:</b> UX, UI, Web, Apps, Logos</p>
+                    <p><b>Design Tools:</b> Affinity Designer, Figma, Pen & Paper, Sketch</p>
                 </td>
             </tr>
         </tbody>
@@ -131,6 +116,6 @@ def run():
 
     # Display the combined content
     st.markdown(combined_content, unsafe_allow_html=True)
-    
+
 if __name__ == "__main__":
     run()
