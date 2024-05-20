@@ -24,12 +24,13 @@ def run():
         page_icon="👋",
     )
 
-    st.write("Hello there! 👋")
-
     st.sidebar.success("Select a demo above.")
 
+    st.markdown("""<h1 style = "font-family:new roman;"><b>Hello there! 👋</b></h1>""", unsafe_allow_html=True)
+
     st.markdown(
-        """
+    """
+    <em style = "font-size:15px">My name is Jasmina Abdullaeva. Currently, I am pursuing B.S. in Computer Science at Fordham University. 
        I am passionate about technology and innovation. As an aspiring programmer, 
        I thribe on tackling complex problems and creating bright solutions.
        I first discovered my love for programming during my involvement in competitive robotics.
@@ -38,9 +39,10 @@ def run():
        autonomously navigate obstacle courses. This experience sparkled in me a relentless curiosity 
        to push boundaries and expand my caoabilities.
 
-       Find more of my work in the Project Section!
-    """
-    )
+       Find more of my work in the Project Section!</em>
+    """,
+    unsafe_allow_html=True
+)
 
 
 if __name__ == "__main__":
