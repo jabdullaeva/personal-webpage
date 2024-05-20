@@ -31,10 +31,9 @@ def run():
   
     st.markdown("""<p style="font-family:'Roboto', cursive; text-align: center; font-size: 16px; font-weight: normal;">I design and code 
         beautifully simple things, and I love what I do.</p>""", unsafe_allow_html=True)
-    
-    col1, col2, col3 = st.columns(3)
-    col2.image('jasminaphoto1.jpg', width=250)
 
+    with st.columns(3)[1]:
+        st.image('jasminaphoto1.jpg', width=250, use_column_width=True)
 
     blue_container = """
     <div style="background-color: #007FFF; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
@@ -57,12 +56,12 @@ def run():
             border-collapse: separate;
             border-spacing: 0;
             font-family: 'Roboto', sans-serif;
-            border: 1px solid #ddd;
+            border: 1px solid #007FFF;
             border-radius: 15px;
             overflow: hidden;
         }
         .rounded-table th, .rounded-table td {
-            border: 1px solid #ddd;
+            border: 1px solid #007FFF;
             padding: 16px;
             text-align: center;
             vertical-align: top;
@@ -108,13 +107,9 @@ def run():
                     <b>Experiences I draw from:</b><br>
                     UX/UI, Quality Assurance, Product design<br><br>
                     <b>Mentor Stats:</b><br>
-                    9+ years experience<br>
-                    30+ short courses<br>
-                    65+ bootcamps<br>
-                    250+ students<br>
-                    2,500+ mentor sessions<br>
-                    60+ group critiques<br>
-                    18,000+ bits of feedback
+                    3+ years experience<br>
+                    100+ students<br>
+                    10+ mentor sessions<br>
                     <p>
                 </td>
                 <td>
