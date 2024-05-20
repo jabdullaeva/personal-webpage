@@ -31,13 +31,15 @@ def run():
   
     st.markdown("""<p style="font-family:'Roboto', cursive; text-align: center; font-size: 16px; font-weight: normal;">I design and code 
         beautifully simple things, and I love what I do.</p>""", unsafe_allow_html=True)
+    
+    with st.columns(3)[1]:
+        st.image('jasminaphoto1.jpg', width=250)
 
     blue_container = """
     <div style="background-color: #007FFF; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
         <h2 style="font-family: 'Roboto', sans-serif; text-align: center; font-size: 25px; color: white;">Hi, I’m Jasmina. Nice to meet you.👋</h2>
         <p style="font-family: 'Roboto', sans-serif; text-align: center; font-size: 16px; color: white;">
-        Since beginning my journey, I thrive on tackling complex problems 
-        and creating bright solutions. I first discovered my love for programming during my involvement 
+        Since beginning of my journey, I have always thrived to takle complex problems and create bright solutions. I first discovered my love for programming during my involvement 
         in competitive robotics. As one of the leaders of an award-winning FIRST Tech Challenge team #14212, 
         I honed my skills by designing and coding robots to autonomously navigate obstacle courses. 
         I'm quietly confident, naturally curious, and perpetually working on improving my chops.
