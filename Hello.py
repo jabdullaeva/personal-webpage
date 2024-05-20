@@ -73,6 +73,13 @@ def run():
         .rounded-table tbody tr:nth-child(even) {
             background-color: #ffffff;
         }
+        @media only screen and (max-width: 600px) {
+            .rounded-table th, .rounded-table td {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
     </style>
     <table class="rounded-table">
         </thead>
@@ -118,8 +125,12 @@ def run():
         </tbody>
     </table>
     """
-    combined_content = blue_container + roles_table
-    st.markdown(combined_content, unsafe_allow_html=True)
 
+    # Combine the blue container and the roles table
+    combined_content = blue_container + roles_table
+
+    # Display the combined content
+    st.markdown(combined_content, unsafe_allow_html=True)
+    
 if __name__ == "__main__":
     run()
