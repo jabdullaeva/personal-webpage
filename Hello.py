@@ -32,8 +32,9 @@ def run():
     st.markdown("""<p style="font-family:'Roboto', cursive; text-align: center; font-size: 16px; font-weight: normal;">I design and code 
         beautifully simple things, and I love what I do.</p>""", unsafe_allow_html=True)
     
-    with st.columns(3)[1]:
-        st.image('jasminaphoto1.jpg', width=250)
+    col1, col2, col3 = st.columns(3)
+    col2.image('jasminaphoto1.jpg', width=250)
+
 
     blue_container = """
     <div style="background-color: #007FFF; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
