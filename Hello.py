@@ -17,33 +17,109 @@ from streamlit.logger import get_logger
 
 LOGGER = get_logger(__name__)
 
-
 def run():
     st.set_page_config(
         page_title="Hello",
         page_icon="👋",
     )
 
-    st.sidebar.success("Select a demo above.")
+    st.markdown("""
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    """, unsafe_allow_html=True)
 
-    st.markdown("""<h1 style = "font-family:new roman;"><b>Hello there! 👋</b></h1>""", unsafe_allow_html=True)
+    st.markdown("""<h1 style = "font-family: 'Roboto', cursive; text-align: center; font-size: 36px;"><b>Designer, Frontend Developer & Mentor</b></h1>""", unsafe_allow_html=True)
+  
+    st.markdown("""<p style="font-family:'Roboto', cursive; text-align: center; font-size: 16px; font-weight: normal;">I design and code 
+        beautifully simple things, and I love what I do.</p>""", unsafe_allow_html=True)
 
-    st.markdown(
+    blue_container = """
+    <div style="background-color: #007FFF; padding: 20px; border-radius: 10px; margin-bottom: 20px; width: 200%;">
+        <h2 style="font-family: 'Roboto', sans-serif; text-align: center; font-size: 25px; color: white;">Hi, I’m Jasmina. Nice to meet you.👋</h2>
+        <p style="font-family: 'Roboto', sans-serif; text-align: center; font-size: 16px; color: white;">
+        Since beginning my journey, I thrive on tackling complex problems 
+        and creating bright solutions. I first discovered my love for programming during my involvement 
+        in competitive robotics. As one of the leaders of an award-winning FIRST Tech Challenge team #14212, 
+        I honed my skills by designing and coding robots to autonomously navigate obstacle courses. 
+        I'm quietly confident, naturally curious, and perpetually working on improving my chops.
+        </p>
+    </div>
     """
-    <em style = "font-size:15px">My name is Jasmina Abdullaeva. Currently, I am pursuing B.S. in Computer Science at Fordham University. 
-       I am passionate about technology and innovation. As an aspiring programmer, 
-       I thribe on tackling complex problems and creating bright solutions.
-       I first discovered my love for programming during my involvement in competitive robotics.
-       As one of the leaders of an award-winning FIRST Tech Challenge team #14212, 
-       I honed my skills in Java, Python, C++, HTML and CSS by designing and coding robots to
-       autonomously navigate obstacle courses. This experience sparkled in me a relentless curiosity 
-       to push boundaries and expand my caoabilities.
-
-       Find more of my work in the Project Section!</em>
-    """,
-    unsafe_allow_html=True
-)
-
+    st.write(" ")
+    
+    # Define the HTML and CSS for the table with detailed descriptions
+    roles_table = """
+    <style>
+        .rounded-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-family: 'Arial', sans-serif;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .rounded-table th, .rounded-table td {
+            border: 1px solid #ddd;
+            padding: 16px;
+            text-align: center;
+            vertical-align: top;
+        }
+        .rounded-table thead tr {
+            background-color: #f2f2f2;
+        }
+        .rounded-table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .rounded-table tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
+    <table class="rounded-table">
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p style="color: #007FFF;"><b>Frontend Developer</b><p>
+                    I like to code things from scratch, and enjoy bringing ideas to life in the browser.<br><br>
+                    <b>Languages I speak:</b><br>
+                    Java, Python, C++, HTML, CSS<br><br>
+                    <b>Dev Tools:</b><br>
+                    Github<br>
+                    Netlify<br>
+                    Tailwind CSS<br>
+                    VS Code
+                </td>
+                <td>
+                    <p style="color: #007FFF;">Mentor<b></b></p>
+                    I genuinely care about people, and enjoy helping them work on their craft.<br><br>
+                    <b>Experiences I draw from:</b><br>
+                    UX/UI, Quality Assurance, Product design<br><br>
+                    <b>Mentor Stats:</b><br>
+                    9+ years experience<br>
+                    30+ short courses<br>
+                    65+ bootcamps<br>
+                    250+ students<br>
+                    2,500+ mentor sessions<br>
+                    60+ group critiques<br>
+                    18,000+ bits of feedback
+                </td>
+                <td>
+                    <p style="color: #007FFF;"><b>Designer</b><p>
+                    I value simple content structure, clean design patterns, and thoughtful interactions.<br><br>
+                    <b>Things I enjoy designing:</b><br>
+                    UX, UI, Web, Apps, Logos<br><br>
+                    <b>Design Tools:</b><br>
+                    Affinity Designer<br>
+                    Figma<br>
+                    Pen & Paper<br>
+                    Sketch
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    """
+    combined_content = blue_container + roles_table
+    st.markdown(combined_content, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     run()
