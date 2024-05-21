@@ -13,6 +13,9 @@
 # limitations under the License.
 
 import streamlit as st
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 st.set_page_config(page_title="Contact Info", layout="wide")
 st.markdown("# Contact Info")

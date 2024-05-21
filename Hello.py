@@ -14,9 +14,7 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+
 
 LOGGER = get_logger(__name__)
 
@@ -141,91 +139,3 @@ def run():
     
 if __name__ == "__main__":
     run()
-
-# Function to send email
-def send_email(to_email, subject, message):
-    from_email = "jabdullaeva@fordham.edu"
-    from_password = "Jesika2004"
-    
-    msg = MIMEMultipart()
-    msg['From'] = from_email
-    msg['To'] = to_email
-    msg['Subject'] = subject
-    msg.attach(MIMEText(message, 'plain'))
-    
-    try:
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login(from_email, from_password)
-        server.send_message(msg)
-        server.quit()
-        return "Email sent successfully!"
-    except Exception as e:
-        return str(e)
-
-# Set page configuration
-st.set_page_config(page_title="Contact Info", layout="wide")
-
-# Custom CSS for the button and form
-st.markdown("""
-    <style>
-    .say-hello-button {
-        position: fixed;
-        top: 40px;
-        right: 20px;
-        background-color: #007FFF;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        z-index: 1000;
-    }
-    #contact-form {
-        display: none;
-        position: fixed;
-        top: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        z-index: 1001;
-    }
-    </style>
-    <button class="say-hello-button" onclick="document.getElementById('contact-form').style.display='block'">Say Hello</button>
-    <div id="contact-form">
-        <h3>Contact Us</h3>
-        <form id="contact-us-form">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
-            <label for="question">Question:</label><br>
-            <textarea id="question" name="question" style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea><br>
-            <button type="button" onclick="submitForm()" style="background-color: #007FFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Send</button>
-        </form>
-    </div>
-    <script>
-    function submitForm() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const question = document.getElementById('question').value;
-        const subject = `Question from ${name}`;
-        const message = `Name: ${name}\nEmail: ${email}\n\nQuestion:\n${question}`;
-        
-        fetch('/send_email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ to_email: 'jabdullaeva@fordham.edu', subject: subject, message: message })
-        }).then(response => response.text()).then(result => {
-            alert(result);
-            document.getElementById('contact-form').style.display = 'none';
-        }).catch(error => alert('Error: ' + error));
-    }
-    </script>
-    """, unsafe_allow_html=True)
-
