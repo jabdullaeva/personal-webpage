@@ -18,6 +18,7 @@ def run():
 
     # Define main color
     main_color = "#007FFF"
+    paragraph_color = "#000000"
 
     # Add CSS for custom styling
     st.markdown(f"""
@@ -47,6 +48,7 @@ def run():
             }}
             .section p {{
                 margin: 0;
+                color: {paragraph_color};
                 padding: 5px 0;
             }}
             .contact {{
@@ -78,7 +80,7 @@ def run():
             <p><strong>Minor:</strong> Business Administration</p>
             <p><strong>GPA:</strong> 3.9</p>
             <p><strong>Awards:</strong></p>
-            <ul>
+            <ul style="color: black;">
                 <li>City Council Citation for Robotics</li>
                 <li>Computer Science & Engineering Technology Seal</li>
                 <li>Community Service Award</li>
@@ -203,7 +205,7 @@ def run():
             <p>Spearheaded club outreach and recruitment initiatives through social media, resulting in a 20% increase in membership.</p>
         </div>
     """, unsafe_allow_html=True)
-    
+
     st.markdown("""
         <div class="section">
             <h3>Senator of the Programming Committee, Commuting Student Association, Fordham University, NY (October 2023 - Present)</h3>
