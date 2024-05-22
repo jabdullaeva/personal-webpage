@@ -16,127 +16,211 @@ import streamlit as st
 def run():
     st.set_page_config(page_title="Resume", page_icon="📄")
 
-    st.title("Jasmina Abdullaeva")
+    # Define main color
+    main_color = "#007FFF"
+
+    # Add CSS for custom styling
+    st.markdown(f"""
+        <style>
+            .header {{
+                background-color: {main_color};
+                color: white;
+                padding: 10px;
+                border-radius: 10px;
+                text-align: center;
+            }}
+            .subheader {{
+                color: {main_color};
+                margin-top: 20px;
+                text-align: center;
+                font-size: 24px;
+            }}
+            .section {{
+                margin-top: 20px;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }}
+            .section h3 {{
+                color: {main_color};
+            }}
+            .section p {{
+                margin: 0;
+                padding: 5px 0;
+            }}
+            .contact {{
+                text-align: center;
+                margin-top: 20px;
+            }}
+            .contact p {{
+                margin: 5px 0;
+            }}
+        </style>
+    """, unsafe_allow_html=True)
+
+    # Header with shape
+    st.markdown(f"""
+        <div class="header">
+            <h1>Jasmina Abdullaeva</h1>
+            <p>jabdullaeva@fordham.edu | 929-278-0293 | <a href="https://abdullaevajasmina.streamlit.app" style="color: white;">Website</a></p>
+            <div style="background-color: {main_color}; height: 10px; border-radius: 0px 0px 10px 10px;"></div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Education
     st.markdown("""
-    **Email:** jabdullaeva@fordham.edu  
-    **Phone:** 929-278-0293  
-    **Website:** [abdullaevajasmina.streamlit.app](https://abdullaevajasmina.streamlit.app)
-    """)
+        <div class="section">
+            <h2 class="subheader">Education</h2>
+            <h3>Fordham University, New York, NY</h3>
+            <p><strong>Anticipated Graduation:</strong> May 2027</p>
+            <p><strong>Major:</strong> Computer Science</p>
+            <p><strong>Minor:</strong> Business Administration</p>
+            <p><strong>GPA:</strong> 3.9</p>
+            <p><strong>Awards:</strong></p>
+            <ul>
+                <li>City Council Citation for Robotics</li>
+                <li>Computer Science & Engineering Technology Seal</li>
+                <li>Community Service Award</li>
+                <li>FTC World Championship Division Finalists</li>
+                <li>NYC FIRST Tech Challenge Champions</li>
+                <li>Loyola Scholar</li>
+                <li>Scholar-Athlete Award</li>
+            </ul>
+        </div>
+    """, unsafe_allow_html=True)
 
-    st.header("Education")
+    # Technical Skills
     st.markdown("""
-    **Fordham University, New York, NY**  
-    Anticipated Graduation: May 2027  
-    **Major:** Computer Science  
-    **Minor:** Business Administration  
-    **GPA:** 3.9
-    """)
+        <div class="section">
+            <h2 class="subheader">Technical Skills</h2>
+            <p><strong>Languages:</strong> C/C++, Java, JavaScript, Python, SQL, basic HTML, CSS, TypeScript</p>
+            <p><strong>Software and OS:</strong> XCode, Android Studio, Digital Circuit Design, Arduino, OnShape, Streamlit, Svelte, GitHub, Visual Studio</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Relevant Projects
     st.markdown("""
-    **Awards:**  
-    - City Council Citation for Robotics  
-    - Computer Science & Engineering Technology Seal  
-    - Community Service Award  
-    - FTC World Championship Division Finalists  
-    - NYC FIRST Tech Challenge Champions  
-    - Loyola Scholar  
-    - Scholar-Athlete Award  
-    """)
+        <div class="section">
+            <h2 class="subheader">Relevant Projects</h2>
+        </div>
+    """, unsafe_allow_html=True)
 
-    st.header("Technical Skills")
     st.markdown("""
-    **Languages:**  
-    - C/C++  
-    - Java  
-    - JavaScript  
-    - Python  
-    - SQL  
-    - basic HTML, CSS, TypeScript  
+        <div class="section">
+            <h3>Eco-Tourism, DEVFEST (February 2024)</h3>
+            <p>Developed a Svelte web app to help travelers discover lesser-known sustainable destinations worldwide, with features like mapping, booking eco-tours, and real-time incident reporting to protect environments.</p>
+            <p>Focused on creating an intuitive, user-friendly interface with a clean, modern design, allowing seamless search, browsing of destinations, and access to sustainable travel tips.</p>
+        </div>
+    """, unsafe_allow_html=True)
 
-    **Software and OS:**  
-    - XCode  
-    - Android Studio  
-    - Digital Circuit Design  
-    - Arduino  
-    - OnShape  
-    - Streamlit  
-    - Svelte  
-    - GitHub  
-    - Visual Studio  
-    """)
-
-    st.header("Relevant Projects")
     st.markdown("""
-    **Eco-Tourism, DEVFEST (February 2024)**  
-    Developed a Svelte web app to help travelers discover lesser-known sustainable destinations worldwide, with features like mapping, booking eco-tours, and real-time incident reporting to protect environments.  
-    Focused on creating an intuitive, user-friendly interface with a clean, modern design, allowing seamless search, browsing of destinations, and access to sustainable travel tips.  
+        <div class="section">
+            <h3>CheckMD, HACKNJIT (October 2023)</h3>
+            <p>Built a surgical error prevention web app using Streamlit in Python and enhanced site design using HTML and CSS.</p>
+            <p>Integrated the application with MS Excel for efficient data management.</p>
+            <p>Contributed to a significant reduction in preventable errors in the operating room by implementing critical safety measures.</p>
+        </div>
+    """, unsafe_allow_html=True)
 
-    **CheckMD, HACKNJIT (October 2023)**  
-    Built a surgical error prevention web app using Streamlit in Python and enhanced site design using HTML and CSS.  
-    Integrated the application with MS Excel for efficient data management.  
-    Contributed to a significant reduction in preventable errors in the operating room by implementing critical safety measures.  
-
-    **FIRST POWERPLAY Autonomous and Tele-Op Period for the Robot (September 2022 - June 2023)**  
-    Incorporated OpenCV pipeline, which effortlessly detects the RGB values of the three different colored zones.  
-    Programmed the robot in Java language on Android Studio; the robot efficiently scored 1+5 during the autonomous period.  
-    Implemented roadrunner/odometry for faster and smoother movement while maintaining control of velocity and acceleration.  
-
-    **Light Robot (February 2023 - March 2023)**  
-    Engineered the robot that navigates towards the light, and its speed depends on the brightness.  
-    Utilized phototransistors to detect light presence, piezo speakers, and touch-sensitive whiskers when a bot is running.  
-    Designed a CAD blueprint for the robot using OnShape and coded the robot using C++ language on Arduino.  
-    """)
-
-    st.header("Relevant Experience")
     st.markdown("""
-    **Quality Assurance Developer, Public Affairs Department, Fordham University, New York (August 2023 - Present)**  
-    Test and ensure the quality of the university’s website through Terminal 4 using JavaScript, SQL, HTML, and CSS.  
-    Collaborate with the Assistant Director and marketing team to improve Fordham’s website and social media.  
+        <div class="section">
+            <h3>FIRST POWERPLAY Autonomous and Tele-Op Period for the Robot (September 2022 - June 2023)</h3>
+            <p>Incorporated OpenCV pipeline, which effortlessly detects the RGB values of the three different colored zones.</p>
+            <p>Programmed the robot in Java language on Android Studio; the robot efficiently scored 1+5 during the autonomous period.</p>
+            <p>Implemented roadrunner/odometry for faster and smoother movement while maintaining control of velocity and acceleration.</p>
+        </div>
+    """, unsafe_allow_html=True)
 
-    **Software Engineer Intern, JPMorgan Chase & Co., New York (June 2024 - August 2024)**  
-    Completed tasks focused on interfacing with a stock price data feed, fixing scripts, and manipulating financial data using Python, Git, React, and TypeScript.  
-
-    **Mentor & Team Captain, First Tech Challenge Robotics Team, Metrobotics FTC 14212, New York (September 2019 - June 2023)**  
-    Ranked Division finalists at FTC World Championships (ranked #1 in NYC and #32 in the world out of 6,000 teams).  
-    Arranged meetings with Google, NASA, and NNL to learn more about the robotics field.  
-    Worked with FDNY Robotics, One Earth Conservation, and AFYA Foundation and held fundraisers.  
-    Organized STEM community events (workshops for high school and middle school students, STEM days, FTC scrimmages).  
-
-    **Programming Specialist Intern, Think Design Program, New York (July 2022 - August 2022)**  
-    Provided technical assistance and support to create the Escape Room using my programming skills in Java and Python.  
-    Presented 3 robotics courses in the Escape Room, using Arduino building and coding.  
-    """)
-
-    st.header("Leadership Experience")
     st.markdown("""
-    **Founder & President, Project Pixel Organization (Intro to Robotics and Coding), New York City, NY (January 2024 - Present)**  
-    Direct weekly 2-hour coding workshops in Java for Project Pixel members to gain programming experience.  
-    Introduced a curriculum focused on game development and robotics, which received positive feedback from 60+ participants.  
+        <div class="section">
+            <h3>Light Robot (February 2023 - March 2023)</h3>
+            <p>Engineered the robot that navigates towards the light, and its speed depends on the brightness.</p>
+            <p>Utilized phototransistors to detect light presence, piezo speakers, and touch-sensitive whiskers when a bot is running.</p>
+            <p>Designed a CAD blueprint for the robot using OnShape and coded the robot using C++ language on Arduino.</p>
+        </div>
+    """, unsafe_allow_html=True)
 
-    **Undergraduate Representative, Cybersecurity Club, Fordham University, NY (December 2023 - Present)**  
-    Execute engaging cybersecurity workshops with guest speakers from IBM, Google, and KPMG with over 100 participants.  
-    Spearheaded club outreach and recruitment initiatives through social media, resulting in a 20% increase in membership.  
-
-    **Senator of the Programming Committee, Commuting Student Association, Fordham University, NY (October 2023 - Present)**  
-    Championed commuter student needs by securing $5,000 in scholarship funding.  
-    Curated 3 innovative events: “Urban Night” (200+ attendees), “Game Night: Level Up Your Skills” (promoted teamwork and problem-solving), and “Networking Event” (15 internship offers).  
-    """)
-
-    st.header("Languages and Skills")
+    # Relevant Experience
     st.markdown("""
-    **Languages:**  
-    - Fluent in Russian, Tajik  
-    - Intermediate in French, Uzbek  
+        <div class="section">
+            <h2 class="subheader">Relevant Experience</h2>
+        </div>
+    """, unsafe_allow_html=True)
 
-    **Skills:**  
-    - Testing  
-    - Communication  
-    - Debugging  
-    - Problem-Solving  
-    - Time Management  
-    - Detail Oriented  
-    - Organized  
-    - Teamwork  
-    """)
+    st.markdown("""
+        <div class="section">
+            <h3>Quality Assurance Developer, Public Affairs Department, Fordham University, New York (August 2023 - Present)</h3>
+            <p>Test and ensure the quality of the university’s website through Terminal 4 using JavaScript, SQL, HTML, and CSS.</p>
+            <p>Collaborate with the Assistant Director and marketing team to improve Fordham’s website and social media.</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+        <div class="section">
+            <h3>Software Engineer Intern, JPMorgan Chase & Co., New York (June 2024 - August 2024)</h3>
+            <p>Completed tasks focused on interfacing with a stock price data feed, fixing scripts, and manipulating financial data using Python, Git, React, and TypeScript.</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+        <div class="section">
+            <h3>Mentor & Team Captain, First Tech Challenge Robotics Team, Metrobotics FTC 14212, New York (September 2019 - June 2023)</h3>
+            <p>Ranked Division finalists at FTC World Championships (ranked #1 in NYC and #32 in the world out of 6,000 teams).</p>
+            <p>Arranged meetings with Google, NASA, and NNL to learn more about the robotics field.</p>
+            <p>Worked with FDNY Robotics, One Earth Conservation, and AFYA Foundation and held fundraisers.</p>
+            <p>Organized STEM community events (workshops for high school and middle school students, STEM days, FTC scrimmages).</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+        <div class="section">
+            <h3>Programming Specialist Intern, Think Design Program, New York (July 2022 - August 2022)</h3>
+            <p>Provided technical assistance and support to create the Escape Room using my programming skills in Java and Python.</p>
+            <p>Presented 3 robotics courses in the Escape Room, using Arduino building and coding.</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Leadership Experience
+    st.markdown("""
+        <div class="section">
+            <h2 class="subheader">Leadership Experience</h2>
+        </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+        <div class="section">
+            <h3>Founder & President, Project Pixel Organization (Intro to Robotics and Coding), New York City, NY (January 2024 - Present)</h3>
+            <p>Direct weekly 2-hour coding workshops in Java for Project Pixel members to gain programming experience.</p>
+            <p>Introduced a curriculum focused on game development and robotics, which received positive feedback from 60+ participants.</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+        <div class="section">
+            <h3>Undergraduate Representative, Cybersecurity Club, Fordham University, NY (December 2023 - Present)</h3>
+            <p>Execute engaging cybersecurity workshops with guest speakers from IBM, Google, and KPMG with over 100 participants.</p>
+            <p>Spearheaded club outreach and recruitment initiatives through social media, resulting in a 20% increase in membership.</p>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+        <div class="section">
+            <h3>Senator of the Programming Committee, Commuting Student Association, Fordham University, NY (October 2023 - Present)</h3>
+            <p>Championed commuter student needs by securing $5,000 in scholarship funding.</p>
+            <p>Curated 3 innovative events: “Urban Night” (200+ attendees), “Game Night: Level Up Your Skills” (promoted teamwork and problem-solving), and “Networking Event” (15 internship offers).</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # Languages and Skills
+    st.markdown("""
+        <div class="section">
+            <h2 class="subheader">Languages and Skills</h2>
+            <p><strong>Languages:</strong> Fluent in Russian, Tajik; Intermediate in French, Uzbek</p>
+            <p><strong>Skills:</strong> Testing, Communication, Debugging, Problem-Solving, Time Management, Detail Oriented, Organized, Teamwork</p>
+        </div>
+    """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     run()
+
