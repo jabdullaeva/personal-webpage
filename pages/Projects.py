@@ -84,7 +84,7 @@ def run():
         <style>
         .back-home-button {
             position: fixed;
-            top: 20px;
+            top: 50px;
             right: 20px;
             background-color: #007FFF;
             color: white;
@@ -93,6 +93,7 @@ def run():
             border-radius: 5px;
             cursor: pointer;
             font-family: 'Roboto', sans-serif;
+            font-color: #FFFFFF
             font-size: 16px;
             z-index: 1000;
         }
