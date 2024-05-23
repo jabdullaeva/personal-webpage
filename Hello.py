@@ -11,12 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 import streamlit as st
 from streamlit.logger import get_logger
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 
 LOGGER = get_logger(__name__)
 
@@ -30,28 +26,27 @@ def run():
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     """, unsafe_allow_html=True)
 
-    st.markdown("""<h1 style = "font-family: 'Roboto', cursive; text-align: center; font-size: 36px;"><b>Designer, Frontend Developer & Mentor</b></h1>""", unsafe_allow_html=True)
-  
+    st.markdown("""<h1 style="font-family: 'Roboto', cursive; text-align: center; font-size: 36px;"><b>Designer, Frontend Developer & Mentor</b></h1>""", unsafe_allow_html=True)
     st.markdown("""<p style="font-family:'Roboto', cursive; text-align: center; font-size: 16px; font-weight: normal;">I design and code 
         beautifully simple things, and I love what I do.</p>""", unsafe_allow_html=True)
 
-    with st.columns(3)[1]:
+    col1, col2, col3 = st.columns([1, 3, 1])
+    with col2:
         st.image('jasminaphoto1.jpg', width=200, use_column_width=True)
 
     blue_container = """
-    <div style="background-color: #007FFF; padding: 20px; border-radius: 10px; margin-bottom: 20px; width: 20; left: 20%; right: 20%;">
+    <div style="background-color: #007FFF; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
         <h2 style="font-family: 'Roboto', sans-serif; text-align: center; font-size: 25px; color: white;">Hi, I’m Jasmina. Nice to meet you.👋</h2>
         <p style="font-family: 'Roboto', sans-serif; text-align: center; font-size: 16px; color: white;">
-        Since beginning of my journey, I have always thrived to takle complex problems and create bright solutions. I first discovered my love for programming during my involvement 
+        Since beginning of my journey, I have always thrived to tackle complex problems and create bright solutions. I first discovered my love for programming during my involvement 
         in competitive robotics. As one of the leaders of an award-winning FIRST Tech Challenge team #14212, 
         I honed my skills by designing and coding robots to autonomously navigate obstacle courses. 
         I'm quietly confident, naturally curious, and working on improving my chops.
         </p>
     </div>
     """
-    st.write(" ")
+    st.markdown(blue_container, unsafe_allow_html=True)
     
-    # Define the HTML and CSS for the table with detailed descriptions
     roles_table = """
     <style>
         .rounded-table {
@@ -87,7 +82,6 @@ def run():
         }
     </style>
     <table class="rounded-table">
-        </thead>
         <tbody>
             <tr>
                 <td>
@@ -133,48 +127,13 @@ def run():
     </table>
     """
 
-    # Combine the blue container and the roles table
-    combined_content = blue_container + roles_table
-
-    # Display the combined content
-    st.markdown(combined_content, unsafe_allow_html=True)
+    st.markdown(roles_table, unsafe_allow_html=True)
     
-if __name__ == "__main__":
-    run()
-
-# Function to send email
-def send_email(to_email, subject, message):
-    # Email configuration
-    from_email = "jabdullaeva@fordham.edu"
-    from_password = "Jesika2004"
-    
-    # Setup the MIME
-    msg = MIMEMultipart()
-    msg['From'] = from_email
-    msg['To'] = to_email
-    msg['Subject'] = subject
-    msg.attach(MIMEText(message, 'plain'))
-    
-    try:
-        # Establish a secure session with gmail's outgoing SMTP server using your gmail account
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login(from_email, from_password)
-        
-        # Send email
-        server.send_message(msg)
-        server.quit()
-        
-        return "Email sent successfully!"
-    except Exception as e:
-        return str(e)
-    
-# Add the CSS for the button in the top right corner
-st.markdown("""
+    st.markdown("""
     <style>
     .say-hello-button {
         position: fixed;
-        top: 20px;
+        top: 50px;
         right: 20px;
         background-color: #007FFF;
         color: white;
@@ -186,18 +145,8 @@ st.markdown("""
         font-size: 16px;
     }
     </style>
-""", unsafe_allow_html=True)
-
-# Add the "Say Hello" button
-if st.button('Say Hello', key='say-hello-button', help='Click to say hello!'):
-    with st.form(key='contact_form'):
-        name = st.text_input("Your Name")
-        email = st.text_input("Your Email")
-        question = st.text_area("Your Question")
-        submit_button = st.form_submit_button(label='Send')
-
-        if submit_button:
-            subject = f"Question from {name}"
-            message = f"Name: {name}\nEmail: {email}\n\nQuestion:\n{question}"
-            response = send_email("jabdullaeva@fordham.edu", subject, message)
-            st.success(response)
+    <a href="mailto:jabdullaeva@fordham.edu" class="say-hello-button">Say Hello</a>
+    """, unsafe_allow_html=True)
+    
+if __name__ == "__main__":
+    run()
