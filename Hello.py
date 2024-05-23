@@ -85,6 +85,18 @@ def run():
         <tbody>
             <tr>
                 <td>
+                    <p style="color: #007FFF;"><b>Quality Assurance Developer</b><p>
+                    <p style="color: #000000;">
+                    I ensure optimal user experiences through rigorous testing and quality standards.<br><br>
+                    <b>Areas of Expertise:</b><br>
+                    Web Application Testing<br>
+                    Test Automation (JavaScript, SQL)<br>
+                    Cross-Browser/Device Compatibility<br>
+                    Accessibility & Usability Testing<br>
+                    Defect Tracking & Reporting<br>
+                    <p>
+                </td>
+                <td>                    
                     <p style="color: #007FFF;"><b>Frontend Developer</b><p>
                     <p style="color: #000000;">
                     I like to code things from scratch, and enjoy bringing ideas to life in the browser.<br><br>
@@ -107,19 +119,6 @@ def run():
                     3+ years experience<br>
                     100+ students<br>
                     10+ mentor sessions<br>
-                    <p>
-                </td>
-                <td>
-                    <p style="color: #007FFF;"><b>Designer</b><p>
-                    <p style="color: #000000;">
-                    I value simple content structure, clean design patterns, and thoughtful interactions.<br><br>
-                    <b>Things I enjoy designing:</b><br>
-                    UX, UI, Web, Apps, Logos<br><br>
-                    <b>Design Tools:</b><br>
-                    Affinity Designer<br>
-                    Figma<br>
-                    Pen & Paper<br>
-                    Sketch
                     <p>
                 </td>
             </tr>
