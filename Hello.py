@@ -26,7 +26,7 @@ def run():
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     """, unsafe_allow_html=True)
 
-    st.markdown("""<h1 style="font-family: 'Roboto', cursive; text-align: center; font-size: 36px;"><b>Designer, Frontend Developer & Mentor</b></h1>""", unsafe_allow_html=True)
+    st.markdown("""<h1 style="font-family: 'Roboto', cursive; text-align: center; font-size: 36px;"><b>QA Developer, Frontend Developer & Mentor</b></h1>""", unsafe_allow_html=True)
     st.markdown("""<p style="font-family:'Roboto', cursive; text-align: center; font-size: 16px; font-weight: normal;">I design and code 
         beautifully simple things, and I love what I do.</p>""", unsafe_allow_html=True)
 
