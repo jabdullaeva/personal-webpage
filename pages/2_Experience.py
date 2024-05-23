@@ -101,48 +101,6 @@ def run():
         </div>
     """, unsafe_allow_html=True)
 
-    # Relevant Projects
-    st.markdown("""
-        <div class="section">
-            <h2 class="subheader">Relevant Projects</h2>
-        </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-        <div class="section">
-            <h3>Eco-Tourism, DEVFEST (February 2024)</h3>
-            <p>Developed a Svelte web app to help travelers discover lesser-known sustainable destinations worldwide, with features like mapping, booking eco-tours, and real-time incident reporting to protect environments.</p>
-            <p>Focused on creating an intuitive, user-friendly interface with a clean, modern design, allowing seamless search, browsing of destinations, and access to sustainable travel tips.</p>
-        </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-        <div class="section">
-            <h3>CheckMD, HACKNJIT (October 2023)</h3>
-            <p>Built a surgical error prevention web app using Streamlit in Python and enhanced site design using HTML and CSS.</p>
-            <p>Integrated the application with MS Excel for efficient data management.</p>
-            <p>Contributed to a significant reduction in preventable errors in the operating room by implementing critical safety measures.</p>
-        </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-        <div class="section">
-            <h3>FIRST POWERPLAY Autonomous and Tele-Op Period for the Robot (September 2022 - June 2023)</h3>
-            <p>Incorporated OpenCV pipeline, which effortlessly detects the RGB values of the three different colored zones.</p>
-            <p>Programmed the robot in Java language on Android Studio; the robot efficiently scored 1+5 during the autonomous period.</p>
-            <p>Implemented roadrunner/odometry for faster and smoother movement while maintaining control of velocity and acceleration.</p>
-        </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-        <div class="section">
-            <h3>Light Robot (February 2023 - March 2023)</h3>
-            <p>Engineered the robot that navigates towards the light, and its speed depends on the brightness.</p>
-            <p>Utilized phototransistors to detect light presence, piezo speakers, and touch-sensitive whiskers when a bot is running.</p>
-            <p>Designed a CAD blueprint for the robot using OnShape and coded the robot using C++ language on Arduino.</p>
-        </div>
-    """, unsafe_allow_html=True)
-
     # Relevant Experience
     st.markdown("""
         <div class="section">
